@@ -1,1 +1,1 @@
-add you discord bot token to a python file name token.py
+add your discord bot token to a python file named token.py
