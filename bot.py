@@ -6,7 +6,7 @@ import os
 
 #ssh 
 
-TOKEN = 'ODg2NjQ5NDAwNjYxODAzMDE4.YT4qmg.GnFi0TJb1u_sxfHv3pd1DPw3oVM'
+TOKEN = ''
 
 
 client = commands.Bot(command_prefix='.')
