@@ -9,7 +9,7 @@ playlist = []
 
 #ssh 
 
-TOKEN = ''
+TOKEN = 'ODg2NjQ5NDAwNjYxODAzMDE4.YT4qmg.hCkae_NkWc7pnlMNx8gB2XwUdCI'
 
 
 client = commands.Bot(command_prefix='.')
@@ -44,7 +44,7 @@ async def play(ctx,url):
 
         playlist.append(url)
 
-
+        
         ctx.voice_client.stop()
         FFMPEG_OPTIONS={'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
         YDL_OPTIONS = {'format': "bestaudio"}
@@ -72,5 +72,15 @@ async def stop(ctx):
     voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
     voice.stop()
     await ctx.send("7bes mosi9a")
+
+@client.command()
+async def resume(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    voice.resume()
+
+@client.command()
+async def resume(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    voice.pause()
 
 client.run(TOKEN)
